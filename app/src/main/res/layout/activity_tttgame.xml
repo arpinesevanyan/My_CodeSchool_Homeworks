@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundBlue"
+    android:backgroundTint="#1A1C4F"
+    tools:context=".ticTacToe.TTTGameActivity">
+
+    <TextView
+        android:id="@+id/OneTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/xand0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/xand0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/OneTwo" />
+
+    <TextView
+        android:id="@+id/purpleBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_back_purple_for_ttt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/xand0"
+        app:layout_constraintEnd_toEndOf="@id/xand0"
+        app:layout_constraintStart_toStartOf="@id/xand0"
+        app:layout_constraintTop_toTopOf="@id/xand0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playerOneName"
+        style="@style/Dark_Blue_Style"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="330dp"
+        android:drawableBottom="@drawable/icon_x_for_ttt"
+        android:text="One"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/playerTwoName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playerTwoName"
+        style="@style/Dark_Blue_Style"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="330dp"
+        android:drawableBottom="@drawable/icon_0_for_ttt"
+        android:text="Two"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/playerOneName"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toBottomOf="@id/purpleBack"
+        app:layout_constraintEnd_toStartOf="@id/button2"
+        app:layout_constraintStart_toStartOf="@id/purpleBack"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toBottomOf="@id/purpleBack"
+        app:layout_constraintEnd_toStartOf="@id/button3"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toBottomOf="@id/button5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toBottomOf="@id/purpleBack"
+        app:layout_constraintEnd_toEndOf="@id/purpleBack"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button6" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintEnd_toStartOf="@id/button5"
+        app:layout_constraintStart_toStartOf="@id/purpleBack"
+        app:layout_constraintTop_toBottomOf="@id/button7" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintEnd_toStartOf="@id/button6"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintTop_toBottomOf="@id/button8" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toTopOf="@id/button3"
+        app:layout_constraintEnd_toEndOf="@id/purpleBack"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@id/button9" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintEnd_toStartOf="@id/button8"
+        app:layout_constraintStart_toStartOf="@id/purpleBack"
+        app:layout_constraintTop_toTopOf="@id/purpleBack" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintEnd_toStartOf="@id/button9"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintTop_toTopOf="@id/purpleBack" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/button_blue_for_ttt"
+        app:layout_constraintBottom_toTopOf="@id/button6"
+        app:layout_constraintEnd_toEndOf="@id/purpleBack"
+        app:layout_constraintStart_toEndOf="@id/button8"
+        app:layout_constraintTop_toTopOf="@id/purpleBack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

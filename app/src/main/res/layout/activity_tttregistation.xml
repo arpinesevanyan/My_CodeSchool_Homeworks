@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_blue_for_ttt"
+    android:backgroundTint="#1A1C4F"
+    tools:context=".ticTacToe.TTTRegistation">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="216dp"
+        android:text="Enter Player names"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/playerOneName"
+        style="@style/Dark_Blue_Style"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="330dp"
+        android:drawableLeft="@drawable/icon_x_for_ttt"
+        android:text="Player One"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <EditText
+        android:id="@+id/playerTwoName"
+        style="@style/Dark_Blue_Style"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="235dp"
+        android:drawableLeft="@drawable/icon_0_for_ttt"
+        android:text="Player Two"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startGameButton"
+        style="@style/Light_Blue_Button_Style"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="132dp"
+        android:text="Start Game"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

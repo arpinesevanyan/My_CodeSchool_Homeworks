@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".country.Flags">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/armenianFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/russianFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/franceFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/usaFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ukFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/germanyFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/italyFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spainFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/indianFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iranianFlag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
