@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.customView
+package com.example.mycodeschoolhomeworks.customview
 
 import android.content.Context
 import android.graphics.Canvas

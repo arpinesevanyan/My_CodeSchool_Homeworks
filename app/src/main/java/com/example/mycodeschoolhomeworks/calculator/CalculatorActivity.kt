@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.R
 import net.objecthunter.exp4j.ExpressionBuilder
 
-class Calculator : AppCompatActivity(), View.OnClickListener {
+class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var math_operation: TextView
     private lateinit var result_text: TextView

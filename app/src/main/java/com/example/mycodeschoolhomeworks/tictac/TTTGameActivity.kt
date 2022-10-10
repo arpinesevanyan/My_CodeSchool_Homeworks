@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.ticTacToe
+package com.example.mycodeschoolhomeworks.tictac
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.R
-import com.example.mycodeschoolhomeworks.ticTacToe.TTTRegistation.Companion.PLAYER_ONE_NAME
-import com.example.mycodeschoolhomeworks.ticTacToe.TTTRegistation.Companion.PLAYER_TWO_NAME
+import com.example.mycodeschoolhomeworks.tictac.TTTRegistation.Companion.PLAYER_ONE_NAME
+import com.example.mycodeschoolhomeworks.tictac.TTTRegistation.Companion.PLAYER_TWO_NAME
 
 class TTTGameActivity : AppCompatActivity(), View.OnClickListener {
 

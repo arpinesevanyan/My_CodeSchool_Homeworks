@@ -1,14 +1,6 @@
-package com.example.mycodeschoolhomeworks.country
+package com.example.mycodeschoolhomeworks.recyclerview.data.model
 
-import com.example.mycodeschoolhomeworks.R
-
-public enum class CountryEnum(
-    image: String,
-    capital: String,
-    shortDescription: String,
-    longDescription: String,
-    independenceDay: String
-) {
+enum class CountryEnum(val imageUrl: String,val capital: String,val shortDescription: String,val longDescription: String,val independenceDay: String) {
     ARMENIA(
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/1920px-Flag_of_Armenia.svg.png",
         "Yerevan",

@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.ticTacToe
+package com.example.mycodeschoolhomeworks.tictac
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

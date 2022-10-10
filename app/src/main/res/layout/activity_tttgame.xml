@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundBlue"
     android:backgroundTint="#1A1C4F"
-    tools:context=".ticTacToe.TTTGameActivity">
+    tools:context=".tictac.TTTGameActivity">
 
     <TextView
         android:id="@+id/OneTwo"

@@ -16,16 +16,22 @@
         <entry key="app/src/main/res/drawable/round_back_purple_for_ttt.xml" value="0.1275" />
         <entry key="app/src/main/res/layout/activity_boxes.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_calculator.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_country_info.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/layout/activity_country_list.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_flags.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_my_custom_view.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_random_text_generator.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_recycler_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_tthome.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_tttgame.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_ttthome.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_tttregistation.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/countries_recycler_view.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/countrys_recycler_view.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/flags.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/teim_country.xml" value="0.16197916666666667" />
       </map>
     </option>
   </component>

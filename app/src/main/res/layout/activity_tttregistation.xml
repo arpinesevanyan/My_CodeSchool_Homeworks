@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/button_blue_for_ttt"
     android:backgroundTint="#1A1C4F"
-    tools:context=".ticTacToe.TTTRegistation">
+    tools:context=".tictac.TTTRegistation">
 
     <TextView
         android:id="@+id/text"
