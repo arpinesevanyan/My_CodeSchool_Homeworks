@@ -16,6 +16,18 @@
         android:theme="@style/Theme.MyCodeSchoolHomeworks"
         tools:targetApi="31">
         <activity
+            android:name=".RadioGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomRadioButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomCheckBoxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckBox"
+            android:exported="false" />
+        <activity
             android:name=".recyclerview.ui.countrylist.CountryListActivity"
             android:exported="false" />
         <activity

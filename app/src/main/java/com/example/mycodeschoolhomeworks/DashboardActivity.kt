@@ -6,8 +6,10 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.mycodeschoolhomeworks.box.BoxesActivity
 import com.example.mycodeschoolhomeworks.calculator.CalculatorActivity
 import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.CountryListActivity
+import com.example.mycodeschoolhomeworks.tictac.TTTRegistation
 
 class DashboardActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -39,12 +41,18 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     CalculatorActivity::class.java
                 )
             )
-            CodeSchoolHomeworks.TIC_TAC -> {
-
-            }
-            CodeSchoolHomeworks.RADIO_GROUP -> {
-
-            }
+            CodeSchoolHomeworks.TIC_TAC -> startActivity(
+                Intent(
+                    this,
+                    TTTRegistation::class.java
+                )
+            )
+            CodeSchoolHomeworks.RADIO_GROUP -> startActivity(
+                Intent(
+                    this,
+                    BoxesActivity::class.java
+                )
+            )
             CodeSchoolHomeworks.RECYCLER_VIEW -> startActivity(
                 Intent(
                     this,
@@ -59,6 +67,5 @@ enum class CodeSchoolHomeworks {
     CALCULATOR,
     TIC_TAC,
     RADIO_GROUP,
-    RECYCLER_VIEW,
-    BOXES
+    RECYCLER_VIEW
 }

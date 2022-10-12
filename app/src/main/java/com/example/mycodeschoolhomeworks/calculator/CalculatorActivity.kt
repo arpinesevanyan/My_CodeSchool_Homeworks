@@ -58,6 +58,14 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
         equalButton = findViewById(R.id.equalButton)
         backButton = findViewById(R.id.backButton)
 
+    }
+
+    fun setTextFields(str: String) {
+        math_operation.append(str)
+    }
+
+    override fun onClick(view: View?) {
+
         number1Button.setOnClickListener { setTextFields("1") }
         number2Button.setOnClickListener { setTextFields("2") }
         number3Button.setOnClickListener { setTextFields("3") }
@@ -99,13 +107,5 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
                 Log.d("error", "message: ${e.message}")
             }
         }
-    }
-
-    fun setTextFields(str: String) {
-        math_operation.append(str)
-    }
-
-    override fun onClick(view: View?) {
-
     }
 }
