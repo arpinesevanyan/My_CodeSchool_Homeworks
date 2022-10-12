@@ -37,6 +37,27 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
 
+        number1Button = findViewById(R.id.number1Button)
+        number2Button = findViewById(R.id.number2Button)
+        number3Button = findViewById(R.id.number3Button)
+        number4Button = findViewById(R.id.number4Button)
+        number5Button = findViewById(R.id.number5Button)
+        number6Button = findViewById(R.id.number6Button)
+        number7Button = findViewById(R.id.number7Button)
+        number8Button = findViewById(R.id.number8Button)
+        number9Button = findViewById(R.id.number9Button)
+        number0Button = findViewById(R.id.number0Button)
+
+        dotButton = findViewById(R.id.dotButton)
+        minusButton = findViewById(R.id.minusButton)
+        plusButton = findViewById(R.id.plusButton)
+        multiplyButton = findViewById(R.id.multiplyButton)
+        divisionButton = findViewById(R.id.divisionButton)
+        percentButton = findViewById(R.id.percentButton)
+        clearButton = findViewById(R.id.clearButton)
+        equalButton = findViewById(R.id.equalButton)
+        backButton = findViewById(R.id.backButton)
+
         number1Button.setOnClickListener { setTextFields("1") }
         number2Button.setOnClickListener { setTextFields("2") }
         number3Button.setOnClickListener { setTextFields("3") }

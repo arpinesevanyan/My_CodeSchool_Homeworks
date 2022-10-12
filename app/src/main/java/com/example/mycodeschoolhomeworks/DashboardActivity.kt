@@ -59,5 +59,6 @@ enum class CodeSchoolHomeworks {
     CALCULATOR,
     TIC_TAC,
     RADIO_GROUP,
-    RECYCLER_VIEW
+    RECYCLER_VIEW,
+    BOXES
 }
