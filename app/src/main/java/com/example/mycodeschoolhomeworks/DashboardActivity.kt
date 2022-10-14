@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.box.BoxesActivity
 import com.example.mycodeschoolhomeworks.calculator.CalculatorActivity
+import com.example.mycodeschoolhomeworks.recyclerview.RecyclerViewActivity
 import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.CountryListActivity
 import com.example.mycodeschoolhomeworks.tictac.TTTRegistation
 
@@ -56,7 +57,7 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
             CodeSchoolHomeworks.RECYCLER_VIEW -> startActivity(
                 Intent(
                     this,
-                    CountryListActivity::class.java
+                    RecyclerViewActivity::class.java
                 )
             )
         }

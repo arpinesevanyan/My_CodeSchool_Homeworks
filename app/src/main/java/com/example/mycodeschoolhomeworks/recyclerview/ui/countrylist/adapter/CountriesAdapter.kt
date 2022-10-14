@@ -57,10 +57,8 @@ class CountriesAdapter(val countryItemClickListener: OnCountryItemClickListener)
     interface OnCountryItemClickListener {
         fun onCountryItemClicked(countryEnum: CountryEnum)
     }
-
     companion object {
         const val LONG_DESCRIPTION = "long description"
         const val LABEL = "label"
-
     }
 }
