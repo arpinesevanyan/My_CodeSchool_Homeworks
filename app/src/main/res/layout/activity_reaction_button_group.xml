@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".box.activity.ReactionButtonGroupActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/reactionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/likeButton"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/reaction_button_drawable"
+            android:button="@color/white"
+            android:drawableStart="@drawable/icon_like"
+            android:text="like"
+            app:layout_constraintEnd_toStartOf="@id/commentButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/commentButton"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/reaction_button_drawable"
+            android:button="@color/white"
+            android:drawableStart="@drawable/icon_comment"
+            android:text="comment"
+            app:layout_constraintEnd_toStartOf="@id/likeButton"
+            app:layout_constraintStart_toEndOf="@id/shareButton" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shareButton"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/reaction_button_drawable"
+            android:button="@color/white"
+            android:drawableStart="@drawable/icon_share"
+            android:text="share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/commentButton" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

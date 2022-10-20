@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mycodeschoolhomeworks.R
 import com.example.mycodeschoolhomeworks.recyclerview.data.model.CountryEnum
 import com.example.mycodeschoolhomeworks.recyclerview.ui.countryinfo.CountryInfoActivity
-import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.adapter.CountriesAdapter
-import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.adapter.CountriesAdapter.Companion.LONG_DESCRIPTION
+import com.example.mycodeschoolhomeworks.recyclerview.ui.adapter.CountriesAdapter
+import com.example.mycodeschoolhomeworks.recyclerview.ui.adapter.CountriesAdapter.Companion.LONG_DESCRIPTION
 
 class CountryListActivity : AppCompatActivity(), CountriesAdapter.OnCountryItemClickListener {
 

@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.R
 import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.CountryListActivity
+import com.example.mycodeschoolhomeworks.recyclerview.ui.postlist.PostListActivity
 
 class RecyclerViewActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +42,7 @@ class RecyclerViewActivity : AppCompatActivity(), View.OnClickListener {
             RecyclerViews.POSTS-> startActivity(
                 Intent(
                     this,
-                    CountryListActivity::class.java
+                    PostListActivity::class.java
                 )
             )
         }

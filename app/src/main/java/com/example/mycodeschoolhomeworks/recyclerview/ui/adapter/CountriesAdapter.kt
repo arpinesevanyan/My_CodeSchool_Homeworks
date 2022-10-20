@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.adapter
+package com.example.mycodeschoolhomeworks.recyclerview.ui.adapter
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -20,8 +20,12 @@ class CountriesAdapter(val countryItemClickListener: OnCountryItemClickListener)
     private val items = CountryEnum.values()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_country, parent, false))
+        ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_country, parent, false)
+        )
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
+
     override fun getItemCount(): Int = items.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -40,10 +44,11 @@ class CountriesAdapter(val countryItemClickListener: OnCountryItemClickListener)
                 countryItemClickListener.onCountryItemClicked(currentItem)
             }
             capital.setOnClickListener {
-                    val clipboardManager = itemView.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                    clipboardManager.setPrimaryClip(ClipData.newPlainText(LABEL, capital.text))
-                    Toast.makeText(itemView.context, "Copied", Toast.LENGTH_SHORT).show()
-                    false
+                val clipboardManager =
+                    itemView.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                clipboardManager.setPrimaryClip(ClipData.newPlainText(LABEL, capital.text))
+                Toast.makeText(itemView.context, "Copied", Toast.LENGTH_SHORT).show()
+                false
             }
         }
 
@@ -57,6 +62,7 @@ class CountriesAdapter(val countryItemClickListener: OnCountryItemClickListener)
     interface OnCountryItemClickListener {
         fun onCountryItemClicked(countryEnum: CountryEnum)
     }
+
     companion object {
         const val LONG_DESCRIPTION = "long description"
         const val LABEL = "label"

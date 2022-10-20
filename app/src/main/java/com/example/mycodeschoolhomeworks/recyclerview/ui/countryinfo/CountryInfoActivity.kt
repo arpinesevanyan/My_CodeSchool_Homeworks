@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mycodeschoolhomeworks.R
-import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.adapter.CountriesAdapter.Companion.LONG_DESCRIPTION
+import com.example.mycodeschoolhomeworks.recyclerview.ui.adapter.CountriesAdapter.Companion.LONG_DESCRIPTION
 
 class CountryInfoActivity : AppCompatActivity() {
 
