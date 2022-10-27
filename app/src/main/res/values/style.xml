@@ -51,5 +51,20 @@
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
     </style>
+    <style name="DataMeLightBlue">
+        <item name="android:background">@drawable/button_data_me_light_blue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+    </style>
 
+    <style name="DataMeLightBlueStoke">
+        <item name="android:background">@drawable/button_data_me_blue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
 </resources>

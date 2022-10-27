@@ -1,5 +1,6 @@
 package com.example.mycodeschoolhomeworks.box.activity
 
+import android.content.Context
 import android.content.Intent
 import android.content.Intent.EXTRA_SUBJECT
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +24,12 @@ class ReactionButtonGroupActivity : AppCompatActivity() {
 
         likeButton.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, likeButton.text, Toast.LENGTH_SHORT).show()
+            startActivity(intent)
         })
 
         commentButton.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, commentButton.text, Toast.LENGTH_SHORT).show()
+            startActivity(intent)
         })
 
         shareButton.setOnClickListener(View.OnClickListener {
@@ -35,5 +38,18 @@ class ReactionButtonGroupActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(myIntent, "Share your post"))
             Toast.makeText(this, shareButton.text, Toast.LENGTH_SHORT).show()
         })
+    }
+}
+
+object Utils {
+
+    fun share(context: Context, shareBody: String, type: String) {
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, shareBody)
+            this.type = type
+        }
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        context.startActivity(shareIntent)
     }
 }

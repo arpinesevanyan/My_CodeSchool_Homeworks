@@ -13,8 +13,8 @@ class CustomRadioButtonActivity : AppCompatActivity() {
 
 
         val genderRadioGroup = findViewById<RadioGroup>(R.id.genderRadioGroup)
-        genderRadioGroup.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, chechedId ->
-            when (chechedId) {
+        genderRadioGroup.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
+            when (checkedId) {
                 R.id.male-> {
                     Toast.makeText(this, "Male", Toast.LENGTH_SHORT).show()
                 }

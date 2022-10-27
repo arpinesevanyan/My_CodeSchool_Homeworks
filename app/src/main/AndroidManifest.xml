@@ -9,14 +9,85 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/CodeSchoolHomework"
         android:roundIcon="@drawable/icon_0_for_ttt"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCodeSchoolHomeworks"
         tools:targetApi="31">
         <activity
-            android:name=".RadioGroupReactionActivity"
+            android:name=".menusandpickers.activities.OptionsMenuActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".menusandpickers.activities.TimePickerActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".menusandpickers.MenusActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".menusandpickers.activities.DataPickerActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".contract.SignUpActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".contract.LoginActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".contract.HomeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".menusandpickers.activities.ContextMenuActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".recyclerview.ui.postlist.activities.WebViewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_web_view"
+            android:theme="@style/Theme.MyCodeSchoolHomeworks.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".recyclerview.ui.postlist.activities.FullScreenImageActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".box.activity.ReactionButtonGroupActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

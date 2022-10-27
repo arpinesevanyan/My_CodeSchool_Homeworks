@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.box.BoxesActivity
 import com.example.mycodeschoolhomeworks.calculator.CalculatorActivity
+import com.example.mycodeschoolhomeworks.contract.HomeActivity
+import com.example.mycodeschoolhomeworks.menusandpickers.MenusActivity
 import com.example.mycodeschoolhomeworks.recyclerview.RecyclerViewActivity
 import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.CountryListActivity
 import com.example.mycodeschoolhomeworks.tictac.TTTRegistation
@@ -60,6 +62,18 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     RecyclerViewActivity::class.java
                 )
             )
+            CodeSchoolHomeworks.MENUS_PICKERS->startActivity(
+                Intent(
+                    this,
+                    MenusActivity::class.java
+                )
+            )
+            CodeSchoolHomeworks.CONTRACT->startActivity(
+                Intent(
+                    this,
+                    HomeActivity::class.java
+                )
+            )
         }
     }
 }
@@ -68,5 +82,7 @@ enum class CodeSchoolHomeworks {
     CALCULATOR,
     TIC_TAC,
     RADIO_GROUP,
-    RECYCLER_VIEW
+    RECYCLER_VIEW,
+    MENUS_PICKERS,
+    CONTRACT
 }

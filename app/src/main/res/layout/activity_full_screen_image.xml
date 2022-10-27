@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".recyclerview.ui.postlist.activities.WebViewActivity">
+    tools:context=".recyclerview.ui.postlist.activities.FullScreenImageActivity">
 
-    <WebView
-        android:id="@+id/webView"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fullScreenImageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

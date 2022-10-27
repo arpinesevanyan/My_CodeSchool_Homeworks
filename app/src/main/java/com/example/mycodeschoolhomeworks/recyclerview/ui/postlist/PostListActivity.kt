@@ -1,50 +1,73 @@
 package com.example.mycodeschoolhomeworks.recyclerview.ui.postlist
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.mycodeschoolhomeworks.R
-import com.example.mycodeschoolhomeworks.box.activity.ReactionButtonGroupActivity
-import com.example.mycodeschoolhomeworks.recyclerview.data.model.PostType
-import com.example.mycodeschoolhomeworks.recyclerview.data.model.TextPost
-import com.example.mycodeschoolhomeworks.recyclerview.data.model.VideoPost
+import com.example.mycodeschoolhomeworks.box.activity.Utils
+import com.example.mycodeschoolhomeworks.databinding.ActivityPostListBinding
+import com.example.mycodeschoolhomeworks.recyclerview.data.model.*
 import com.example.mycodeschoolhomeworks.recyclerview.ui.adapter.PostsAdapter
+import com.example.mycodeschoolhomeworks.recyclerview.ui.postlist.activities.FullScreenImageActivity
+import com.example.mycodeschoolhomeworks.recyclerview.ui.postlist.activities.WebViewActivity
 
-class PostListActivity : AppCompatActivity(), PostsAdapter.OnPostItemClickListener {
 
-    private lateinit var postRecyclerView: RecyclerView
+class PostListActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityPostListBinding
+
+    private val items = Post.getData()
+    private lateinit var postsAdapter: PostsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_post_list)
-        postRecyclerView = findViewById(R.id.postRecyclerView)
+        binding = ActivityPostListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        adapterClick()
 
-        val items = mutableListOf<PostType>()
-        items.add(TextPost(1, "This is just a beginning"))
-        items.add(TextPost(1, "Make love not war"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-        items.add(VideoPost(2, "https://www.youtube.com/watch?v=31E2tSxE35I"))
-
-        val postAdapter = PostsAdapter(this)
-
-        postRecyclerView.apply {
+        binding.postRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@PostListActivity)
-            adapter = postAdapter
+            adapter = postsAdapter
         }
-
-        postAdapter.updateData(items)
+        postsAdapter.updateData(items)
     }
 
-    override fun onPostItemClicked(postType: PostType) {
-        intent = Intent(this, PostType::class.java)
-        intent=Intent(this, ReactionButtonGroupActivity::class.java)
-        startActivity(intent)
+    @SuppressLint("SetTextI18n")
+    private fun adapterClick() {
+        postsAdapter = PostsAdapter { action, post ->
+            when (action) {
+                PostsAdapter.PostActionEnum.ACTION_URL_ITEM_CLICK -> {
+                    post as UrlPost
+                    val intent = Intent(this@PostListActivity, WebViewActivity::class.java)
+                    intent.putExtra(PostsAdapter.URL_FOR_WEB_VIEW, post.url)
+                    startActivity(intent)
+                }
+                PostsAdapter.PostActionEnum.ACTION_IMAGE_ITEM_CLICK -> {
+                    post as ImagePost
+
+                    val intent = Intent(this@PostListActivity, FullScreenImageActivity::class.java)
+                    intent.putExtra(PostsAdapter.FULL_SCREEN_IMAGE, post.imageUrl)
+                    startActivity(intent)
+                }
+                PostsAdapter.PostActionEnum.ACTION_SHARE_TEXT -> {
+                    post as TextPost
+                    Utils.share(this, post.text, "text/plain")
+                }
+                PostsAdapter.PostActionEnum.ACTION_SHARE_IMAGE -> {
+                    post as ImagePost
+                    Utils.share(this, post.imageUrl, "image/jpeg")
+                }
+                PostsAdapter.PostActionEnum.ACTION_SHARE_VIDEO -> {
+                    post as VideoPost
+                    Utils.share(this, post.videoUrl, "image/jpeg")
+                }
+                PostsAdapter.PostActionEnum.ACTION_SHARE_URL -> {
+                    post as UrlPost
+                    Utils.share(this, post.url, "image/jpeg")
+                }
+            }
+        }
+        postsAdapter.updateData(items)
     }
 }

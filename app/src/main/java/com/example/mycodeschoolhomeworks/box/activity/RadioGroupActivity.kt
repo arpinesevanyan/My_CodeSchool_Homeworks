@@ -16,12 +16,12 @@ class RadioGroupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_radio_group)
 
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-        val button = findViewById<Button>(R.id.button)
+        val buttonSelect = findViewById<Button>(R.id.buttonSelect)
 
-        button.setOnClickListener(View.OnClickListener {
+        buttonSelect.setOnClickListener(View.OnClickListener {
             val selectButton: Int = radioGroup!!.checkedRadioButtonId
-            val button = findViewById<RadioButton>(selectButton)
-            Toast.makeText(this, button.text, Toast.LENGTH_SHORT).show()
+            val buttonSelect = findViewById<RadioButton>(selectButton)
+            Toast.makeText(this, buttonSelect.text, Toast.LENGTH_SHORT).show()
 
         })
     }

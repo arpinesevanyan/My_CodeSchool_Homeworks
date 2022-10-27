@@ -10,4 +10,7 @@
     <color name="backgroundBlue">#101032</color>
     <color name="startGameColor">#FF00BCD4</color>
     <color name="purple">#6648C3</color>
+    <color name="data_me_blue">#3355EC</color>
+    <color name="data_me_register">#1F2E4D</color>
+    <color name="data_me_stroke">#0F1F41</color>
 </resources>
