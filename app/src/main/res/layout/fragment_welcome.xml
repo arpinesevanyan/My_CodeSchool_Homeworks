@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authorization.activities.HomeActivity"
     android:background="@drawable/login2"
-    >
+    tools:context=".datemefragment.fragments.WelcomeFragment">
 
     <TextView
-        android:id="@+id/dateMeView"
+        android:id="@+id/firstTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data Me."
@@ -24,7 +23,7 @@
         app:layout_constraintVertical_bias="0.391" />
 
     <TextView
-        android:id="@+id/secondTextView"
+        android:id="@+id/secondTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -33,7 +32,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dateMeView" />
+        app:layout_constraintTop_toBottomOf="@id/firstTV" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/logInButton"
@@ -62,5 +61,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/messageData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

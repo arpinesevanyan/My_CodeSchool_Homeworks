@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.contract
+package com.example.mycodeschoolhomeworks.authorization.activities
 
 import android.app.Activity
 import android.content.Intent

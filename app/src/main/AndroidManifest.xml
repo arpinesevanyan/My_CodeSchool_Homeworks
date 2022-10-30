@@ -15,6 +15,13 @@
         android:theme="@style/Theme.MyCodeSchoolHomeworks"
         tools:targetApi="31">
         <activity
+            android:name=".datemefragment.GeneralActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".menusandpickers.activities.OptionsMenuActivity"
             android:exported="false">
             <meta-data
@@ -43,21 +50,21 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".contract.SignUpActivity"
+            android:name=".authorization.activities.SignUpActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".contract.LoginActivity"
+            android:name=".authorization.activities.LoginActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".contract.HomeActivity"
+            android:name=".authorization.activities.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

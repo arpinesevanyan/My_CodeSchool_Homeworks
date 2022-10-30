@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.box.BoxesActivity
 import com.example.mycodeschoolhomeworks.calculator.CalculatorActivity
-import com.example.mycodeschoolhomeworks.contract.HomeActivity
+import com.example.mycodeschoolhomeworks.authorization.activities.HomeActivity
+import com.example.mycodeschoolhomeworks.datemefragment.GeneralActivity
 import com.example.mycodeschoolhomeworks.menusandpickers.MenusActivity
 import com.example.mycodeschoolhomeworks.recyclerview.RecyclerViewActivity
-import com.example.mycodeschoolhomeworks.recyclerview.ui.countrylist.CountryListActivity
 import com.example.mycodeschoolhomeworks.tictac.TTTRegistation
 
 class DashboardActivity : AppCompatActivity(), View.OnClickListener {
@@ -74,6 +74,12 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     HomeActivity::class.java
                 )
             )
+            CodeSchoolHomeworks.DATE_ME->startActivity(
+                Intent(
+                    this,
+                    GeneralActivity::class.java
+                )
+            )
         }
     }
 }
@@ -84,5 +90,6 @@ enum class CodeSchoolHomeworks {
     RADIO_GROUP,
     RECYCLER_VIEW,
     MENUS_PICKERS,
-    CONTRACT
+    CONTRACT,
+    DATE_ME
 }

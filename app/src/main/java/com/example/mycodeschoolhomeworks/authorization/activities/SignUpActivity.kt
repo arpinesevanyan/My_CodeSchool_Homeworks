@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.contract
+package com.example.mycodeschoolhomeworks.authorization.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -7,8 +7,8 @@ import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
 import com.example.mycodeschoolhomeworks.R
-import com.example.mycodeschoolhomeworks.contract.LoginActivity.Companion.PASSWORD
-import com.example.mycodeschoolhomeworks.contract.LoginActivity.Companion.USER_NAME
+import com.example.mycodeschoolhomeworks.authorization.activities.LoginActivity.Companion.PASSWORD
+import com.example.mycodeschoolhomeworks.authorization.activities.LoginActivity.Companion.USER_NAME
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var buttonSignUp: AppCompatButton
