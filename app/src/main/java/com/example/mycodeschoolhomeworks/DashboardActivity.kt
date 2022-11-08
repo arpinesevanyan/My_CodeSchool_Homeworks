@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.mycodeschoolhomeworks.appstore.StoreActivity
 import com.example.mycodeschoolhomeworks.box.BoxesActivity
 import com.example.mycodeschoolhomeworks.calculator.CalculatorActivity
 import com.example.mycodeschoolhomeworks.authorization.activities.HomeActivity
@@ -62,22 +63,28 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     RecyclerViewActivity::class.java
                 )
             )
-            CodeSchoolHomeworks.MENUS_PICKERS->startActivity(
+            CodeSchoolHomeworks.MENUS_PICKERS -> startActivity(
                 Intent(
                     this,
                     MenusActivity::class.java
                 )
             )
-            CodeSchoolHomeworks.CONTRACT->startActivity(
+            CodeSchoolHomeworks.CONTRACT -> startActivity(
                 Intent(
                     this,
                     HomeActivity::class.java
                 )
             )
-            CodeSchoolHomeworks.DATE_ME->startActivity(
+            CodeSchoolHomeworks.DATE_ME -> startActivity(
                 Intent(
                     this,
                     GeneralActivity::class.java
+                )
+            )
+            CodeSchoolHomeworks.APP_STORE -> startActivity(
+                Intent(
+                    this,
+                    StoreActivity::class.java
                 )
             )
         }
@@ -91,5 +98,6 @@ enum class CodeSchoolHomeworks {
     RECYCLER_VIEW,
     MENUS_PICKERS,
     CONTRACT,
-    DATE_ME
+    DATE_ME,
+    APP_STORE
 }

@@ -40,7 +40,6 @@ class WelcomeFragment : Fragment() {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.fragmentContainer, SignupFragment())?.commit()
         }
-
     }
 
     companion object {

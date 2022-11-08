@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.example.mycodeschoolhomeworks.R
 import com.example.mycodeschoolhomeworks.datemefragment.datamodel.DataModel
 import com.example.mycodeschoolhomeworks.datemefragment.fragments.WelcomeFragment

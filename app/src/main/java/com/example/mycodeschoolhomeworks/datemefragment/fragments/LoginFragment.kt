@@ -40,6 +40,8 @@ class LoginFragment : Fragment() {
         loginButtonLF.setOnClickListener {
             dataModel.message.value = emailOrPhoneETLF.toString()
             dataModel.message.value = passwordETLV.toString()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.fragmentContainer, WelcomeFragment())?.commit()
         }
     }
 

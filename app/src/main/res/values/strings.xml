@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tic Tac Toe</string>
+    <string name="app_name">CodeSchoolHomework</string>
     <string name="CodeSchoolHomework" />
 
     <string-array name="some_values">
@@ -16,4 +16,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="actionShare">Share with Friends</string>
+    <string name="actionFavorites">Add to Favorites</string>
+    <string name="actionBookmark">Bookmark</string>
+    <string name="actionInfo">More Information</string>
 </resources>
