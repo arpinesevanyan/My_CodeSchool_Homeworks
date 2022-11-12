@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mycodeschoolhomeworks.R
+import com.example.mycodeschoolhomeworks.appstore.fragments.gamesfragments.GamesFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class TopChartsFragment : BottomSheetDialogFragment() {
@@ -22,11 +23,10 @@ class TopChartsFragment : BottomSheetDialogFragment() {
         return inflater.inflate(R.layout.fragment_top_charts, container, false)
     }
 
-//    fun newInstance(): {
+//    fun newInstance(): GamesFragment{
 //        val args = Bundle()
-//
 //        val fragment = ()
 //        fragment.arguments = args
 //        return fragment
-//    }
+//}
 }

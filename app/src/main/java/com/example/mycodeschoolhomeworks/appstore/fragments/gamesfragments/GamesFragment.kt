@@ -38,5 +38,6 @@ open class GamesFragment : BaseFragment() {
 
 //        viewPagerGames.adapter=fragmentAdapter
 //        tableLayoutGames.setupWithViewPager(viewPagerGames)
+
     }
 }
