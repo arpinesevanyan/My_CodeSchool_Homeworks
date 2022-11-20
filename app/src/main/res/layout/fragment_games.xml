@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".appstore.fragments.gamesfragments.GamesFragment">
 
-    <include layout="@layout/fragment_base" />
+    <include layout="@layout/fragment_search_view" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tableLayoutGames"

@@ -11,8 +11,8 @@ import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var math_operation: TextView
-    private lateinit var result_text: TextView
+    private lateinit var mathOperation: TextView
+    private lateinit var resultText: TextView
     private lateinit var number1Button: AppCompatButton
     private lateinit var number2Button: AppCompatButton
     private lateinit var number3Button: AppCompatButton
@@ -61,11 +61,10 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun setTextFields(str: String) {
-        math_operation.append(str)
+        mathOperation.append(str)
     }
 
     override fun onClick(view: View?) {
-
         number1Button.setOnClickListener { setTextFields("1") }
         number2Button.setOnClickListener { setTextFields("2") }
         number3Button.setOnClickListener { setTextFields("3") }
@@ -83,26 +82,26 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
         divisionButton.setOnClickListener { setTextFields("/") }
         percentButton.setOnClickListener { setTextFields("%") }
         clearButton.setOnClickListener {
-            math_operation.text = ""
-            result_text.text = ""
+            mathOperation.text = ""
+            resultText.text = ""
         }
 
         backButton.setOnClickListener {
-            val str = math_operation.text.toString()
+            val str = mathOperation.text.toString()
             if (str.isNotEmpty())
-                math_operation.text = str.substring(0, str.length - 1)
-            result_text.text = ""
+                mathOperation.text = str.substring(0, str.length - 1)
+            resultText.text = ""
         }
 
         equalButton.setOnClickListener {
             try {
-                val ex = ExpressionBuilder(math_operation.text.toString()).build()
+                val ex = ExpressionBuilder(mathOperation.text.toString()).build()
                 val result = ex.evaluate()
                 val longRes = result.toLong()
                 if (result == longRes.toDouble())
-                    result_text.text = longRes.toString()
+                    resultText.text = longRes.toString()
                 else
-                    result_text.text = result.toString()
+                    resultText.text = result.toString()
             } catch (e: Exception) {
                 Log.d("error", "message: ${e.message}")
             }

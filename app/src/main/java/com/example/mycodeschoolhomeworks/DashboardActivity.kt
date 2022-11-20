@@ -14,6 +14,7 @@ import com.example.mycodeschoolhomeworks.datemefragment.GeneralActivity
 import com.example.mycodeschoolhomeworks.menusandpickers.MenusActivity
 import com.example.mycodeschoolhomeworks.recyclerview.RecyclerViewActivity
 import com.example.mycodeschoolhomeworks.tictac.TTTRegistation
+import com.example.mycodeschoolhomeworks.weatherapp.WeatherMainActivity
 
 class DashboardActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -87,6 +88,12 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     StoreActivity::class.java
                 )
             )
+            CodeSchoolHomeworks.WEATHER_APP -> startActivity(
+                Intent(
+                    this,
+                    WeatherMainActivity::class.java
+                )
+            )
         }
     }
 }
@@ -99,5 +106,6 @@ enum class CodeSchoolHomeworks {
     MENUS_PICKERS,
     CONTRACT,
     DATE_ME,
-    APP_STORE
+    APP_STORE,
+    WEATHER_APP
 }

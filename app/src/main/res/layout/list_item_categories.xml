@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/categoriesListItemTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/categoriesImageView"
+        android:layout_width="@dimen/_75dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/categoriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/_36dp"
+        app:layout_constraintBottom_toBottomOf="@id/categoriesImageView"
+        app:layout_constraintStart_toEndOf="@id/categoriesImageView"
+        app:layout_constraintTop_toTopOf="@id/categoriesImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

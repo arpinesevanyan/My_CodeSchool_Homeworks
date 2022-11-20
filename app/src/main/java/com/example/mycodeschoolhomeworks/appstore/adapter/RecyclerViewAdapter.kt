@@ -1,55 +1,63 @@
 package com.example.mycodeschoolhomeworks.appstore.adapter
 
-import android.content.ClipboardManager
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
-import com.example.mycodeschoolhomeworks.R
-import com.example.mycodeschoolhomeworks.appstore.data.TabItemEnum
+import com.example.mycodeschoolhomeworks.appstore.data.apps_model.AppsForYouDTO
+import com.example.mycodeschoolhomeworks.appstore.data.apps_model.AppsKidsDTO
+import com.example.mycodeschoolhomeworks.appstore.data.games_model.GamesForYouDTO
+import com.example.mycodeschoolhomeworks.appstore.data.games_model.GamesKidsDTO
+import com.example.mycodeschoolhomeworks.databinding.ItemScrollableRecyclerviewForuKidsBinding
 
-class RecyclerViewAdapter() : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.BaseViewHolder>(){
+    private lateinit var context: Context
+    private lateinit var layoutInflater: LayoutInflater
 
-    private val items = TabItemEnum.values()
+    private val items = mutableListOf<List<Any>>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_top_charts, parent, false)
-        )
+    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
+        super.onAttachedToRecyclerView(recyclerView)
+        context=recyclerView.context
+        layoutInflater=LayoutInflater.from(context)
+    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder = AppStoreViewHolder(
+        ItemScrollableRecyclerviewForuKidsBinding.inflate(layoutInflater, parent, false))
 
-//    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(items[position])
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) =holder.bind(items[position])
 
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int= items.size
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    abstract class BaseViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
+        abstract fun bind(item: List<Any>)
+    }
 
-        private var viewPagerTopCharts: ViewPager2
-        private var topChartsButton: AppCompatButton
-        private var categoriesButton: AppCompatButton
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateData(items: List<List<Any>>) {
+        this.items.clear()
+        this.items.addAll(items)
+        notifyDataSetChanged()
+    }
+
+    private inner class AppStoreViewHolder(val binding: ItemScrollableRecyclerviewForuKidsBinding) : BaseViewHolder(binding.root){
+
+        val adapter=MainAdapter()
 
         init {
-            viewPagerTopCharts = itemView.findViewById(R.id.viewPagerTopCharts)
-            topChartsButton = itemView.findViewById(R.id.topChartsButton)
-            categoriesButton = itemView.findViewById(R.id.categoriesButton)
+            binding.scrollableForUAndKidsRecyclerView.adapter=adapter
+        }
 
-            topChartsButton.setOnClickListener {
-
-            }
-            categoriesButton.setOnClickListener {
-                val clipboardManager =
-                    itemView.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                Toast.makeText(itemView.context, "", Toast.LENGTH_SHORT).show()
-                false
-            }
+        override fun bind(item: List<Any>) {
+           binding.titleTextview.text=when(item[absoluteAdapterPosition]){
+               is GamesForYouDTO-> "Games For You"
+               is AppsForYouDTO-> "Apps For You"
+               is GamesKidsDTO-> "Games For Kids"
+               is AppsKidsDTO-> "Apps For Kids"
+               else -> "Other Programs"
+           }
+            adapter.updateData(item)
         }
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
-
 }

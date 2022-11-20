@@ -7,20 +7,20 @@
     tools:context=".DashboardActivity">
 
     <TextView
-        android:id="@+id/math_operation"
+        android:id="@+id/mathOperation"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@color/white"
         android:textColor="@color/black"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@id/result_text"
+        app:layout_constraintBottom_toTopOf="@id/resultText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/result_text"
+        android:id="@+id/resultText"
         android:layout_width="match_parent"
         android:layout_height="100sp"
         android:background="@color/white"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/math_operation"
+        app:layout_constraintTop_toBottomOf="@id/mathOperation"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -40,7 +40,7 @@
         app:layout_constraintBottom_toTopOf="@id/number7Button"
         app:layout_constraintEnd_toStartOf="@id/percentButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result_text" />
+        app:layout_constraintTop_toBottomOf="@id/resultText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/percentButton"
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@id/number8Button"
         app:layout_constraintEnd_toStartOf="@id/backButton"
         app:layout_constraintStart_toEndOf="@id/clearButton"
-        app:layout_constraintTop_toBottomOf="@id/result_text" />
+        app:layout_constraintTop_toBottomOf="@id/resultText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backButton"
@@ -58,7 +58,7 @@
         app:layout_constraintBottom_toTopOf="@id/number9Button"
         app:layout_constraintEnd_toStartOf="@id/divisionButton"
         app:layout_constraintStart_toEndOf="@id/percentButton"
-        app:layout_constraintTop_toBottomOf="@id/result_text" />
+        app:layout_constraintTop_toBottomOf="@id/resultText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/divisionButton"
@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toTopOf="@id/multiplyButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/backButton"
-        app:layout_constraintTop_toBottomOf="@id/result_text" />
+        app:layout_constraintTop_toBottomOf="@id/resultText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number7Button"

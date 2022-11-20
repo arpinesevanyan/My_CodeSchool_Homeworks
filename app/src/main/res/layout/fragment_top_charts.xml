@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".appstore.fragments.gamesfragments.childfragmentsgames.TopChartsFragment">
+    tools:context=".appstore.fragments.TopChartsFragment">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/topChartsButton"
@@ -36,13 +36,15 @@
         app:layout_constraintStart_toEndOf="@id/topChartsButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagerTopCharts"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topChartsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_36dp"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topChartsButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

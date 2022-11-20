@@ -6,12 +6,12 @@
         android:id="@+id/games"
         android:icon="@drawable/icon_games"
         android:iconTint="@color/white"
-        android:title="Games" />
+        android:title="@string/games" />
 
     <item
         android:id="@+id/apps"
-        android:iconTint="@color/white"
         android:icon="@drawable/icon_apps"
-        android:title="Apps" />
+        android:iconTint="@color/white"
+        android:title="@string/apps" />
 
 </menu>

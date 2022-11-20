@@ -20,4 +20,47 @@
     <string name="actionFavorites">Add to Favorites</string>
     <string name="actionBookmark">Bookmark</string>
     <string name="actionInfo">More Information</string>
+
+    <!-- Global-->
+    <string name="global_enter_player_name">Enter Player Names</string>
+    <string name="global_games">Games</string>
+    <string name="global_apps">Apps</string>
+    <string name="global_for_you">For you</string>
+    <string name="global_top_charts">Top Charts</string>
+    <string name="global_kids">Kids</string>
+    <string name="global_categories">Categories</string>
+    <string name="global_name">name</string>
+    <string name="global_rating">rating</string>
+    <string name="global_memory_size">memory size</string>
+    <string name="global_top_free">top free</string>
+    <string name="global_number">number</string>
+    <string name="global_browse_by_age">Browse by age</string>
+    <string name="global_ages_up_to_5">Ages up to 5</string>
+    <string name="global_ages_6_8">Ages 6–8</string>
+    <!-- End Global-->
+
+
+    <!-- App Store-->
+    <string name="games">@string/global_games</string>
+    <string name="apps">@string/global_apps</string>
+    <string name="for_you">@string/global_for_you</string>
+    <string name="kids">@string/global_kids</string>
+    <string name="top_charts">@string/global_top_charts</string>
+    <string name="categories">@string/global_categories</string>
+    <string name="name">@string/global_name</string>
+    <string name="rating">@string/global_rating</string>
+    <string name="memory_size">@string/global_memory_size</string>
+    <string name="top_free">@string/global_top_free</string>
+    <string name="number">@string/global_number</string>
+    <string name="browse_by_age">@string/global_browse_by_age</string>
+    <string name="ages_up_to_5">@string/global_ages_up_to_5</string>
+    <string name="ages_6_8">@string/global_ages_6_8</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="search">search</string>
+    <!-- End App Store-->
+
+    <!-- Weather App-->
+    <string name="hours">hours</string>
+    <string name="days">days</string>
+    <!-- End Weather App-->
 </resources>
