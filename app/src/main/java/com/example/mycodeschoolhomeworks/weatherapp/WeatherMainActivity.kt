@@ -14,3 +14,6 @@ class WeatherMainActivity : AppCompatActivity() {
             .replace(R.id.weatherFragmentsContainer, WeatherMainFragment()).commit()
     }
 }
+
+
+

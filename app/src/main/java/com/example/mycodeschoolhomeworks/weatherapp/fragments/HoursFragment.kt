@@ -1,14 +1,12 @@
 package com.example.mycodeschoolhomeworks.weatherapp.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mycodeschoolhomeworks.R
 import com.example.mycodeschoolhomeworks.databinding.FragmentHoursBinding
 import com.example.mycodeschoolhomeworks.weatherapp.adapters.WeatherAdapter
 import com.example.mycodeschoolhomeworks.weatherapp.adapters.WeatherModel

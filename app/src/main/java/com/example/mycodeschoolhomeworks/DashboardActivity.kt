@@ -11,6 +11,7 @@ import com.example.mycodeschoolhomeworks.box.BoxesActivity
 import com.example.mycodeschoolhomeworks.calculator.CalculatorActivity
 import com.example.mycodeschoolhomeworks.authorization.activities.HomeActivity
 import com.example.mycodeschoolhomeworks.datemefragment.GeneralActivity
+import com.example.mycodeschoolhomeworks.guardian.ui.activity.NewsActivity
 import com.example.mycodeschoolhomeworks.menusandpickers.MenusActivity
 import com.example.mycodeschoolhomeworks.recyclerview.RecyclerViewActivity
 import com.example.mycodeschoolhomeworks.tictac.TTTRegistation
@@ -94,6 +95,12 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     WeatherMainActivity::class.java
                 )
             )
+            CodeSchoolHomeworks.GUARDIAN -> startActivity(
+                Intent(
+                    this,
+                    NewsActivity::class.java
+                )
+            )
         }
     }
 }
@@ -107,5 +114,6 @@ enum class CodeSchoolHomeworks {
     CONTRACT,
     DATE_ME,
     APP_STORE,
-    WEATHER_APP
+    WEATHER_APP,
+    GUARDIAN
 }

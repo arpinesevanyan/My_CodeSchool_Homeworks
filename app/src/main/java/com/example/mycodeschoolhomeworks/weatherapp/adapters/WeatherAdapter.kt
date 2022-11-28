@@ -10,11 +10,12 @@ import com.example.mycodeschoolhomeworks.R
 import com.example.mycodeschoolhomeworks.databinding.ListWeatherItemBinding
 import com.squareup.picasso.Picasso
 
-class WeatherAdapter(val listener:Listener?) : ListAdapter<WeatherModel, WeatherAdapter.Holder>(Comparator()) {
+class WeatherAdapter(val listener: Listener?) :
+    ListAdapter<WeatherModel, WeatherAdapter.Holder>(Comparator()) {
 
     class Holder(view: View, val listener: Listener?) : RecyclerView.ViewHolder(view) {
         val binding = ListWeatherItemBinding.bind(view)
-        var itemTemp: WeatherModel?=null
+        var itemTemp: WeatherModel? = null
 
         init {
             itemView.setOnClickListener {
@@ -23,7 +24,7 @@ class WeatherAdapter(val listener:Listener?) : ListAdapter<WeatherModel, Weather
         }
 
         fun bind(item: WeatherModel) = with(binding) {
-            itemTemp=item
+            itemTemp = item
             dataTV.text = item.time
             conditionTV.text = item.condition
             tvTemp.text = item.currentTemp.ifEmpty { "${item.maxTemp}ºC / ${item.minTemp}ºC" }
@@ -52,7 +53,7 @@ class WeatherAdapter(val listener:Listener?) : ListAdapter<WeatherModel, Weather
         holder.bind(getItem(position))
     }
 
-    interface Listener{
+    interface Listener {
         fun onClick(item: WeatherModel)
     }
 }

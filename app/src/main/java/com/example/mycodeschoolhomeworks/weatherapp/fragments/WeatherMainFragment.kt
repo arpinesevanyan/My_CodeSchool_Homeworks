@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationManager
-import android.media.audiofx.Equalizer.Settings
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -27,17 +26,14 @@ import com.example.mycodeschoolhomeworks.weatherapp.adapters.ViewPagerAdapter
 import com.example.mycodeschoolhomeworks.weatherapp.adapters.WeatherModel
 import com.example.mycodeschoolhomeworks.weatherapp.isPermissionGranted
 import com.example.mycodeschoolhomeworks.weatherapp.model.WeatherViewModel
+import com.example.mycodeschoolhomeworks.weatherapp.utils.Constants.API_KEY
 import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
-import com.google.android.gms.tasks.CancellationToken
 import com.google.android.gms.tasks.CancellationTokenSource
 import com.google.android.material.tabs.TabLayoutMediator
 import com.squareup.picasso.Picasso
 import org.json.JSONObject
-
-const val API_KEY = "a3e7c888da8f46b0bbe141025221811"
 
 class WeatherMainFragment : Fragment() {
     private lateinit var fragmentLocationClient: FusedLocationProviderClient
@@ -64,6 +60,7 @@ class WeatherMainFragment : Fragment() {
         checkPermission()
         init()
         updateCurrentCard()
+
     }
 
     override fun onResume() {

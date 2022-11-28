@@ -1,4 +1,4 @@
-package com.example.mycodeschoolhomeworks.weatherapp.data
+package com.example.mycodeschoolhomeworks.weatherapp.model.data
 
 data class DayItem(
     val city: String,
